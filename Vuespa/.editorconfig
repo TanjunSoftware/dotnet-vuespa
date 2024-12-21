@@ -1,0 +1,22 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+# All files
+[*]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# New line preferences
+end_of_line = lf
+insert_final_newline = false
+
+charset = utf-8
+
+[*.cs]
+csharp_style_namespace_declaration = file_scoped:error
+dotnet_diagnostic.IDE0161.severity = error

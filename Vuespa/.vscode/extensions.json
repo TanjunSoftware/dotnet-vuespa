@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "vue.volar",
+        "editorconfig.editorconfig",
+        "augustocdias.tasks-shell-input"
+    ]
+}

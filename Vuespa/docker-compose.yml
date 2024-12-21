@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  db:
+   image: postgres
+   restart: always
+   environment:
+     POSTGRES_USER: development
+     POSTGRES_PASSWORD: development
+     POSTGRES_DB: Vuespa
+   ports:
+    - 25432:5432
+  smtp4dev:
+    image: rnwood/smtp4dev:v3
+    restart: always
+    ports:
+      - '5000:80'
+      - '25:25'
+      - '143:143'
+    volumes:
+        - smtp4dev-data:/smtp4dev
+    environment:
+      - ServerOptions__Urls=http://*:80
+      - ServerOptions__HostName=smtp4dev
+
+volumes:
+  smtp4dev-data:

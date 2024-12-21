@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "brb3",
+    "classifications": [ "Web/SPA" ],
+    "identity": "VueSpa.brb3",
+    "name": "Vue SPA template with C# API and PostgreSQL",
+    "shortName": "vuespa",
+    "sourceName": "Vuespa",
+    "tags": {
+        "language": "C#,TypeScript",
+        "type": "solution"
+    }
+}
