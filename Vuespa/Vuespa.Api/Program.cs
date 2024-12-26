@@ -61,6 +61,9 @@ else
 }
 
 // Configure CORS policy
+// NOTE: This is an example and _cannot_ be used in a production environment
+// Refer to the Microsoft documentation for guidance on setting up CORS in a production environment
+// https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-9.0
 app.UseCors(x => x
     .WithOrigins("http://localhost:4242")
     .AllowAnyMethod()
@@ -83,6 +86,9 @@ app.MapGroup("/api/auth")
     .MapIdentityApi<ApplicationUser>();
 
 // Add a logout endpoint
+// NOTE: This is an example from the Microsoft documentation. Refer to the documentation
+// here for more information about implementing endpoints in your application:
+// https://learn.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-9.0
 app.MapPost("/api/auth/logout", async (SignInManager<ApplicationUser> signInManager, [FromBody] object empty) =>
 {
     if (empty != null)
